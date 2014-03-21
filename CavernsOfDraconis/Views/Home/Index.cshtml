@@ -1,0 +1,104 @@
+﻿@{
+    Layout = null;
+    Response.Headers["X-UA-Compatible"] = "IE=10";
+    Response.Headers["X-Tabletop-Game"] = "Pathfinder";
+}
+<!DOCTYPE html>
+<html lang="en" ng-app="caverns">
+<head>
+    <meta charset="utf-8" />
+    <title>Caverns of Draconis</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <script src="~/Scripts/angular.js"></script>
+    <script src="~/Scripts/app/app.js"></script>
+</head>
+<body>
+    <div class="container body-content">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#" class="navbar-brand">Caverns of Draconis</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <span class="navbar-text nofloat">Hello, <a href="#" class="navbar-link">@User.Identity.Name</a>!</span>
+                        </li>
+                        <li><a href="#">Log off</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-10">
+                <div class="row" ng-controller="home">
+                    <div class="col-md-12">
+                        <form action="#" class="form-inline">
+                            <label for="game-name">Game Name</label>
+                            <input type="text" name="game-name" id="game-name" ng-model="gamename" placeholder="ex. GAME OF THRONES" class="form-control" />
+                            <label for="password">Password</label>
+                            <input type="text" name="game-password" id="game-password" ng-model="gamepassword" placeholder="(Optional)" class="form-control" />
+                        </form>
+                        <span>{{ gamename }}</span>
+                    </div>
+                </div>
+                <div class="row" ng-controller="game">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-12 game-title">
+                                <h2>{{ name }}</h2>
+                            </div>
+                            <hr />
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-12 playing-area well">
+                                        <div class="card black-card">
+                                            <h5>I <b>really</b> hate it when my mother...</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="card white-card">
+                                            <h5>Batman</h5>
+                                        </div>
+                                        <div class="card white-card">
+                                            <h5>Wonder Woman</h5>
+                                        </div>
+                                        <div class="card white-card selected-card">
+                                            <h5>Eels</h5>
+                                        </div>
+                                        <div class="card white-card">
+                                            <h5>Boxers</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                chat sidebar
+            </div>
+        </div>
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Caverns of Draconis</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+</body>
+</html>

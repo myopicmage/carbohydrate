@@ -1,0 +1,97 @@
+﻿body {
+    padding-bottom: 20px;
+    background-color: #000;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-top: 70px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: white 0 0 20px;
+}
+
+.navbar {
+    box-shadow: black 0 0 20px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* Set padding to display errors that occur during databinding */
+.padding-error {
+    padding-top: 20px;
+}
+
+/* styles for validation helpers */
+.field-validation-error {
+    color: #b94a48;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors,
+.validationMessage {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+.playing-area {
+    height: 500px;
+}
+
+.card {
+    border-radius: 5px;
+    height: 200px;
+    width: 175px;
+    display: inline-block;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.white-card {
+    background-color: white;
+    color: black;
+}
+
+.black-card {
+    background-color: black;
+    color: white;
+}
+
+.white-card:hover {
+    box-shadow: lightblue 0 0 20px;
+}
+
+.white-card:active {
+    box-shadow: red 0 0 20px;
+}
+
+.selected-card {
+    box-shadow: gold 0 0 20px;
+}
+
+@media only screen and (max-width: 767px) {
+    .nofloat {
+        float: none;
+        padding: 10px 15px;
+    }
+}
