@@ -3,13 +3,38 @@
     background-color: #000;
 }
 
+/* this is gross oh so gross */
+.row-table {
+    display: table;
+}
+
+.col-table {
+    float: none;
+    display: table-cell;
+    vertical-align: top;
+}
+
 /* Set padding to keep content from hitting the edges */
 .body-content {
-    padding-top: 70px;
+    padding-top: 50px;
     padding-left: 15px;
     padding-right: 15px;
-    background-color: rgba(255, 255, 255, 0.9);
     box-shadow: white 0 0 20px;
+    background-color: #ababab;
+}
+
+.col {
+    margin-top: -70px;
+}
+
+.left-col {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding-bottom: 30px;
+}
+
+.right-col {
+    background-color: white;
+    height: 100%;
 }
 
 .navbar {
@@ -56,6 +81,8 @@ input[type="checkbox"].input-validation-error {
 
 .playing-area {
     height: 500px;
+    border: 1px solid #aaa;
+    border-radius: 0;
 }
 
 .card {
@@ -63,8 +90,16 @@ input[type="checkbox"].input-validation-error {
     height: 200px;
     width: 175px;
     display: inline-block;
-    padding: 5px;
+    padding: 10px;
     margin-right: 10px;
+    box-shadow: black 0 0 10px;
+    text-align: left;
+}
+
+.card.h5 {
+    font-weight: bold;
+    font-family: Helvetica, Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
+    font-size: 1.2em;
 }
 
 .white-card {
@@ -77,16 +112,32 @@ input[type="checkbox"].input-validation-error {
     color: white;
 }
 
-.white-card:hover {
-    box-shadow: lightblue 0 0 20px;
+.center {
+    margin: 0 auto;
 }
 
-.white-card:active {
+.selectable:hover {
+    box-shadow: darkblue 0 0 20px;
+}
+
+.selectable:active {
     box-shadow: red 0 0 20px;
 }
 
 .selected-card {
     box-shadow: gold 0 0 20px;
+}
+
+.white-card-row {
+    margin-top: 20px;
+}
+
+.black-card-row {
+    margin: 0 auto;
+}
+
+.sidebar {
+    background-color: white;
 }
 
 @media only screen and (max-width: 767px) {

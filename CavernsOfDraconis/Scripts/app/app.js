@@ -7,5 +7,5 @@ caverns.controller('home', ['$scope', function ($scope) {
 }]);
 
 caverns.controller('game', ['$scope', function($scope) {
-    $scope.name = 'Game Title';
+    $scope.name = "The Room (not Wiseau's)";
 }]);

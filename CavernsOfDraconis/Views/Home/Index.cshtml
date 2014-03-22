@@ -7,7 +7,7 @@
 <html lang="en" ng-app="caverns">
 <head>
     <meta charset="utf-8" />
-    <title>Caverns of Draconis</title>
+    <title>Carbohydrate</title>
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <meta name="viewport" content="width=device-width" />
     @Styles.Render("~/Content/css")
@@ -25,7 +25,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a href="#" class="navbar-brand">Caverns of Draconis</a>
+                    <a href="#" class="navbar-brand">Carbohydrate</a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
@@ -37,9 +37,9 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-10">
-                <div class="row" ng-controller="home">
+        <div class="row row-table">
+            <div class="col-md-10 left-col col col-table">
+                <div class="row hidden" ng-controller="home">
                     <div class="col-md-12">
                         <form action="#" class="form-inline">
                             <label for="game-name">Game Name</label>
@@ -61,24 +61,40 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="row">
-                                    <div class="col-md-12 playing-area well">
-                                        <div class="card black-card">
-                                            <h5>I <b>really</b> hate it when my mother...</h5>
+                                    <div class="col-md-12 playing-area well" style="width: 100%;">
+                                        <div class="row">
+                                            <div class="col-md-12" style="width: 100%;">
+                                                <div class="card black-card center">
+                                                    <h5>I <b>really</b> hate it when my mother...</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row white-card-row">
+                                            <div class="col-md-12">
+                                                <div class="card white-card">
+                                                    <h5>Player 1</h5>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <div class="card white-card">
+                                        <h4>Your Hand</h4>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="card white-card selectable">
                                             <h5>Batman</h5>
                                         </div>
-                                        <div class="card white-card">
+                                        <div class="card white-card selectable">
                                             <h5>Wonder Woman</h5>
                                         </div>
-                                        <div class="card white-card selected-card">
+                                        <div class="card white-card selected-card selectable">
                                             <h5>Eels</h5>
                                         </div>
-                                        <div class="card white-card">
+                                        <div class="card white-card selectable">
                                             <h5>Boxers</h5>
                                         </div>
                                     </div>
@@ -88,13 +104,19 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-2">
-                chat sidebar
+            <div class="col-md-2 right-col col col-table">
+                <h2>Players</h2>
+                <ol>
+                    <li>bob</li>
+                    <li>saget</li>
+                    <li>patton</li>
+                    <li>oswalt</li>
+                </ol>
             </div>
         </div>
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - Caverns of Draconis</p>
+            <p>&copy; @DateTime.Now.Year - Carbohydrate</p>
         </footer>
     </div>
 
