@@ -39,6 +39,7 @@
 
 .navbar {
     box-shadow: black 0 0 20px;
+    border: none;
 }
 
 /* Set width on the form input elements since they're 100% wide by default */
@@ -138,6 +139,18 @@ input[type="checkbox"].input-validation-error {
 
 .sidebar {
     background-color: white;
+}
+
+.game-title {
+    border-bottom: 1px solid #aaa;
+    margin-bottom: 20px;
+}
+
+.chatbox {
+    border-top: 1px solid #aaa;
+    padding-top: 5px;
+    position: absolute;
+    bottom: 20px;
 }
 
 @media only screen and (max-width: 767px) {
