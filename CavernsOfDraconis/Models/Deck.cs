@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using CavernsOfDraconis.Helper;
+using System.ComponentModel.DataAnnotations;
 
 namespace CavernsOfDraconis.Models
 {
     public class Deck
     {
+        [Key]
         public int deck_id { get; set; }
         public string title { get; set; }
 

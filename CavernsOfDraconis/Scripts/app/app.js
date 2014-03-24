@@ -6,7 +6,7 @@ caverns.controller('home', ['$scope', function ($scope) {
     $scope.password = '';
 }]);
 
-caverns.controller('game', ['$scope', '$http', function($scope, $http) {
+caverns.controller('game', ['$scope', '$http', function ($scope, $http) {
     $scope.name = "The Room (not Wiseau's)";
     $scope.points = 0;
 
@@ -25,8 +25,6 @@ caverns.controller('manage', ['$scope', '$http', function ($scope, $http) {
     $scope.text = '';
 
     $http.get('/api/Card/10').then(function (response) {
-        console.log(response);
-
         if (response.status === 200) {
             $scope.cards = response.data;
         }
@@ -35,13 +33,24 @@ caverns.controller('manage', ['$scope', '$http', function ($scope, $http) {
 
 caverns.directive('manageTable', function ($http) {
     function link(scope, element, attrs) {
-        $(element).on('$click', function () {
-            console.log(scope);
-            console.log(attrs);
+        $(element).click(function () {
+            $http.post('/api/Card', {
+                title: scope.text,
+                type: scope.colour
+            }).success(function (response) {
+                scope.cards.push({
+                    title: scope.text,
+                    type: scope.colour
+                });
+
+                scope.text = '';
+                console.log(scope.cards);
+                //scope.$apply();
+            });
         });
     }
 
     return {
         link: link
-    }
+    };
 });

@@ -15,7 +15,7 @@
         </thead>
         <tbody>
             <tr ng-repeat-start="card in cards">
-                <td>{{ card.color }}</td>
+                <td>{{ card.type }}</td>
                 <td>{{ card.title }}</td>
                 <td></td>
             </tr>
@@ -28,10 +28,10 @@
                     </select>
                 </td>
                 <td>
-                    <input type="text" name="title" id="title" placeholder="Text" class="form-control" />
+                    <input type="text" name="title" id="title" placeholder="Text" class="form-control" ng-model="text" />
                 </td>
                 <td>
-                    <button type="button" id="submit" class="btn btn-primary">Add new</button>
+                    <button type="button" id="submit" class="btn btn-primary" manage-table>Add new</button>
                 </td>
             </tr>
         </tbody>

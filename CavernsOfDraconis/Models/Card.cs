@@ -17,4 +17,25 @@ namespace CavernsOfDraconis.Models
         Black,
         White
     }
+
+    public class CardDto
+    {
+        public string type { get; set; }
+        public string title { get; set; }
+
+        public CardDto(Card card)
+        {
+            this.type = card.type == Color.White ? "white" : "black";
+            this.title = card.title;
+        }
+
+        public static List<CardDto> GenDto(List<Card> cards)
+        {
+            var cdto = new List<CardDto>();
+
+            cards.ForEach(card => cdto.Add(new CardDto(card)));
+
+            return cdto;
+        }
+    }
 }
