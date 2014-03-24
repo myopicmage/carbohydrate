@@ -18,3 +18,30 @@ caverns.controller('game', ['$scope', '$http', function($scope, $http) {
         }
     });
 }]);
+
+caverns.controller('manage', ['$scope', '$http', function ($scope, $http) {
+    $scope.cards = [];
+    $scope.colour = 'white';
+    $scope.text = '';
+
+    $http.get('/api/Card/10').then(function (response) {
+        console.log(response);
+
+        if (response.status === 200) {
+            $scope.cards = response.data;
+        }
+    });
+}]);
+
+caverns.directive('manageTable', function ($http) {
+    function link(scope, element, attrs) {
+        $(element).on('$click', function () {
+            console.log(scope);
+            console.log(attrs);
+        });
+    }
+
+    return {
+        link: link
+    }
+});

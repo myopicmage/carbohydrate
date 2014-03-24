@@ -2,7 +2,7 @@
     Response.Headers["X-Tabletop-Game"] = "Pathfinder";
 }
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="caverns">
 <head>
     <meta charset="utf-8" />
     <title>@ViewBag.Title - Caverns of Draconis</title>
@@ -10,6 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <script src="~/Scripts/angular.js"></script>
+    <script src="~/Scripts/app/app.js"></script>
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">

@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "Manage";
+}
+
+<h2>Manage</h2>
+
+<div ng-controller="manage">
+    <table class="table table-condensed table-hover">
+        <thead>
+            <tr>
+                <th>Color</th>
+                <th>Title</th>
+                <th>Options</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat-start="card in cards">
+                <td>{{ card.color }}</td>
+                <td>{{ card.title }}</td>
+                <td></td>
+            </tr>
+            <tr ng-repeat-end></tr>
+            <tr>
+                <td>
+                    <select id="colours" name="colours" ng-model="colour" class="form-control">
+                        <option value="white">White</option>
+                        <option value="black">Black</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" name="title" id="title" placeholder="Text" class="form-control" />
+                </td>
+                <td>
+                    <button type="button" id="submit" class="btn btn-primary">Add new</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
