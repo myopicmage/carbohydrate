@@ -78,23 +78,17 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-12">
+                                    <div class="col-md-9">
                                         <h4>Your Hand</h4>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h4 class="pull-right">You have {{ points }} points</h4>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <div class="card white-card selectable">
-                                            <h5>Batman</h5>
-                                        </div>
-                                        <div class="card white-card selectable">
-                                            <h5>Wonder Woman</h5>
-                                        </div>
-                                        <div class="card white-card selected-card selectable">
-                                            <h5>Eels</h5>
-                                        </div>
-                                        <div class="card white-card selectable">
-                                            <h5>Boxers</h5>
+                                        <div class="card white-card selectable" ng-repeat="card in cards">
+                                            {{ card.title }}
                                         </div>
                                     </div>
                                 </div>
