@@ -12,7 +12,8 @@ namespace CavernsOfDraconis.Controllers
             return View();
         }
 
-        public ActionResult Add() {
+        public ActionResult Manage()
+        {
             return View();
         }
     }
