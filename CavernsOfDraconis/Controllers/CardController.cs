@@ -34,18 +34,6 @@ namespace CavernsOfDraconis.Controllers
         public bool Post()
         {
             var input = Request.Content.ReadAsStringAsync();
-
-            //var data =
-            //    input.Result.Split('&')
-            //        .Select(item => item.Replace(@"\", ""))
-            //        .Select(item => item.Replace("+", " "))
-            //        .Select(item => item.Split('='))
-            //        .Aggregate(new Dictionary<string, string>(), (seed, item) =>
-            //        {
-            //            seed.Add(item[0], item[1]);
-            //            return seed;
-            //        });
-
             var data = JsonConvert.DeserializeObject<JObject>(input.Result);
 
             var card = new Card

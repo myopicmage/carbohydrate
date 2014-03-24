@@ -32,20 +32,18 @@ caverns.controller('manage', ['$scope', '$http', function ($scope, $http) {
 }]);
 
 caverns.directive('manageTable', function ($http) {
-    function link(scope, element, attrs) {
+    function link(scope, element) {
         $(element).click(function () {
             $http.post('/api/Card', {
                 title: scope.text,
                 type: scope.colour
-            }).success(function (response) {
+            }).success(function () {
                 scope.cards.push({
                     title: scope.text,
                     type: scope.colour
                 });
 
                 scope.text = '';
-                console.log(scope.cards);
-                //scope.$apply();
             });
         });
     }

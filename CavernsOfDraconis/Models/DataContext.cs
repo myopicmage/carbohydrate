@@ -10,5 +10,6 @@ namespace CavernsOfDraconis.Models
     {
         public DbSet<Card> Cards { get; set; }
         public DbSet<Deck> Decks { get; set; }
+        public DbSet<Game> Games { get; set; }
     }
 }
