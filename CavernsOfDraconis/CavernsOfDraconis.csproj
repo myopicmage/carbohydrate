@@ -213,6 +213,15 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helper\Shuffle.cs" />
+    <Compile Include="Migrations\201403241852182_InitialCreate.cs" />
+    <Compile Include="Migrations\201403241852182_InitialCreate.Designer.cs">
+      <DependentUpon>201403241852182_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201403261721582_initialiguess.cs" />
+    <Compile Include="Migrations\201403261721582_initialiguess.Designer.cs">
+      <DependentUpon>201403261721582_initialiguess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Card.cs" />
@@ -565,6 +574,14 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201403241852182_InitialCreate.resx">
+      <DependentUpon>201403241852182_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201403261721582_initialiguess.resx">
+      <DependentUpon>201403261721582_initialiguess.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -187,3 +187,6 @@ C:\Users\kevin.bernfeld\Documents\Visual Studio 2013\Projects\carbohydrate\Caver
 C:\Users\kevin.bernfeld\Documents\Visual Studio 2013\Projects\carbohydrate\CavernsOfDraconis\bin\System.Web.WebPages.xml
 C:\Users\kevin.bernfeld\Documents\Visual Studio 2013\Projects\carbohydrate\CavernsOfDraconis\bin\System.Web.WebPages.Deployment.xml
 C:\Users\kevin.bernfeld\Documents\Visual Studio 2013\Projects\carbohydrate\CavernsOfDraconis\bin\System.Web.WebPages.Razor.xml
+C:\Users\kevin.bernfeld\Documents\Visual Studio 2013\Projects\carbohydrate\CavernsOfDraconis\obj\Debug\CavernsOfDraconis.Migrations.InitialCreate.resources
+C:\Users\kevin.bernfeld\Documents\Visual Studio 2013\Projects\carbohydrate\CavernsOfDraconis\obj\Debug\CavernsOfDraconis.csproj.GenerateResource.Cache
+C:\Users\kevin.bernfeld\Documents\Visual Studio 2013\Projects\carbohydrate\CavernsOfDraconis\obj\Debug\CavernsOfDraconis.Migrations.initialiguess.resources

@@ -16,6 +16,6 @@ namespace CavernsOfDraconis.Models
         public int deckid { get; set; }
         public Deck deck { get; set; }
 
-        public virtual ICollection<User> Users { get; set; }
+        public virtual IEnumerable<User> Users { get; set; }
     }
 }

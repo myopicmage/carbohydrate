@@ -5,7 +5,7 @@ using System.Text;
 
 namespace CavernsOfDraconis.Models
 {
-    class User
+    public class User
     {
         public int userid { get; set; }
         public string name { get; set; }
